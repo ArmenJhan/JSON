@@ -13,6 +13,7 @@
 		C026150D2917E9FB009DE000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C026150B2917E9FB009DE000 /* Main.storyboard */; };
 		C026150F2917E9FC009DE000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C026150E2917E9FC009DE000 /* Assets.xcassets */; };
 		C02615122917E9FC009DE000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02615102917E9FC009DE000 /* LaunchScreen.storyboard */; };
+		C026151E2917EAB3009DE000 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026151D2917EAB3009DE000 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C026150E2917E9FC009DE000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02615112917E9FC009DE000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02615132917E9FC009DE000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C026151D2917EAB3009DE000 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		C02615042917E9FB009DE000 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				C02615052917E9FB009DE000 /* AppDelegate.swift */,
-				C02615072917E9FB009DE000 /* SceneDelegate.swift */,
-				C02615092917E9FB009DE000 /* ViewController.swift */,
-				C026150B2917E9FB009DE000 /* Main.storyboard */,
+				C02615192917EA16009DE000 /* App */,
+				C026151C2917EA70009DE000 /* Models */,
+				C026151A2917EA48009DE000 /* ViewControllers */,
+				C026151B2917EA5A009DE000 /* Storyboards */,
 				C026150E2917E9FC009DE000 /* Assets.xcassets */,
-				C02615102917E9FC009DE000 /* LaunchScreen.storyboard */,
-				C02615132917E9FC009DE000 /* Info.plist */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		C02615192917EA16009DE000 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C02615052917E9FB009DE000 /* AppDelegate.swift */,
+				C02615072917E9FB009DE000 /* SceneDelegate.swift */,
+				C02615132917E9FC009DE000 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C026151A2917EA48009DE000 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C02615092917E9FB009DE000 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C026151B2917EA5A009DE000 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C026150B2917E9FB009DE000 /* Main.storyboard */,
+				C02615102917E9FC009DE000 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C026151C2917EA70009DE000 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C026151D2917EAB3009DE000 /* Model.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +176,7 @@
 				C026150A2917E9FB009DE000 /* ViewController.swift in Sources */,
 				C02615062917E9FB009DE000 /* AppDelegate.swift in Sources */,
 				C02615082917E9FB009DE000 /* SceneDelegate.swift in Sources */,
+				C026151E2917EAB3009DE000 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JSON/Info.plist;
+				INFOPLIST_FILE = JSON/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Armen-Madoyan.JSON";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JSON/Info.plist;
+				INFOPLIST_FILE = JSON/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,9 +367,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Armen-Madoyan.JSON";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
