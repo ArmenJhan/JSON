@@ -33,6 +33,7 @@ struct Data: Decodable {
 struct Source: Decodable {
     let measures: [String]
     let annotations: Annotations
+    let name: String
 }
 
 struct Annotations: Decodable{

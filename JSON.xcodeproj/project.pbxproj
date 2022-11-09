@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		C02615062917E9FB009DE000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02615052917E9FB009DE000 /* AppDelegate.swift */; };
 		C02615082917E9FB009DE000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02615072917E9FB009DE000 /* SceneDelegate.swift */; };
-		C026150A2917E9FB009DE000 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02615092917E9FB009DE000 /* ViewController.swift */; };
 		C026150D2917E9FB009DE000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C026150B2917E9FB009DE000 /* Main.storyboard */; };
 		C026150F2917E9FC009DE000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C026150E2917E9FC009DE000 /* Assets.xcassets */; };
 		C02615122917E9FC009DE000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02615102917E9FC009DE000 /* LaunchScreen.storyboard */; };
 		C026151E2917EAB3009DE000 /* DataUSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026151D2917EAB3009DE000 /* DataUSA.swift */; };
+		C0F0F07E291BBE2500950045 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0F07D291BBE2500950045 /* MainViewController.swift */; };
+		C0F0F084291BC53500950045 /* UsaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F0F083291BC53500950045 /* UsaCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C02615022917E9FB009DE000 /* JSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02615052917E9FB009DE000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C02615072917E9FB009DE000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C02615092917E9FB009DE000 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C026150C2917E9FB009DE000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C026150E2917E9FC009DE000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02615112917E9FC009DE000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02615132917E9FC009DE000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C026151D2917EAB3009DE000 /* DataUSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUSA.swift; sourceTree = "<group>"; };
+		C0F0F07D291BBE2500950045 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C0F0F083291BC53500950045 /* UsaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsaCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 		C026151A2917EA48009DE000 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C02615092917E9FB009DE000 /* ViewController.swift */,
+				C0F0F07D291BBE2500950045 /* MainViewController.swift */,
+				C0F0F083291BC53500950045 /* UsaCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,9 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C026150A2917E9FB009DE000 /* ViewController.swift in Sources */,
 				C02615062917E9FB009DE000 /* AppDelegate.swift in Sources */,
+				C0F0F07E291BBE2500950045 /* MainViewController.swift in Sources */,
 				C02615082917E9FB009DE000 /* SceneDelegate.swift in Sources */,
+				C0F0F084291BC53500950045 /* UsaCell.swift in Sources */,
 				C026151E2917EAB3009DE000 /* DataUSA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
