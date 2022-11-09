@@ -9,26 +9,27 @@ import UIKit
 
 class MainViewController: UITableViewController {
     
-    private var populations: [Data] = []
+    private var products: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchDataUSA()
+        tableView.rowHeight = 100
+        fetchProduct()
     }
-    
     
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        populations.count
+        products.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UsaCell
-        let population = populations[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = cell as? ProductsCell else { return UITableViewCell() }
         
-        cell.configure(with: population)
+        let product = products[indexPath.row]
+        cell.configure(with: product)
         
         return cell
     }
@@ -37,20 +38,20 @@ class MainViewController: UITableViewController {
 
 // MARK: - Networking
 extension MainViewController {
-    private func fetchDataUSA() {
-        guard let url = URL(string: "https://datausa.io/api/data?drilldowns=Nation&measures=Population") else { return }
+    private func fetchProduct() {
+        guard let url = URL(string: "https://mockyard.herokuapp.com/products") else { return }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data =  data else {
-                print(error?.localizedDescription ?? "No error")
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No error discription")
                 return
             }
             
-            let decoder = JSONDecoder()
             do {
-                let dataUSA = try decoder.decode([DataUsa].self, from: data)
+                let decoder = JSONDecoder()
+                self?.products = try decoder.decode([Product].self, from: data)
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
             } catch let error {
                 print(error.localizedDescription)

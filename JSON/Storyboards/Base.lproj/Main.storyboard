@@ -10,36 +10,42 @@
         <!--List-->
         <scene sceneID="AQi-iz-QN4">
             <objects>
-                <tableViewController id="fyE-KE-Nj4" sceneMemberID="viewController">
+                <tableViewController id="fyE-KE-Nj4" customClass="MainViewController" customModule="JSON" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fSN-vF-iDt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="119" id="VVU-0G-eBO" customClass="UsaCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="119" id="VVU-0G-eBO" customClass="ProductsCell" customModule="JSON" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VVU-0G-eBO" id="ZaE-ib-uhO" customClass="UsaCell" customModule="JSON" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VVU-0G-eBO" id="ZaE-ib-uhO">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="szM-An-nwV">
-                                            <rect key="frame" x="20" y="15" width="93" height="98"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AZV-aJ-McW">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="119"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="140" id="IGW-cM-G3n"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="szM-An-nwV">
+                                            <rect key="frame" x="145" y="0.0" width="93" height="119"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAs-MS-yBl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAs-MS-yBl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHH-cW-6UO">
-                                                    <rect key="frame" x="0.0" y="37" width="93" height="24"/>
+                                                    <rect key="frame" x="0.0" y="46" width="93" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOx-y0-Kh6">
-                                                    <rect key="frame" x="0.0" y="74" width="93" height="24"/>
+                                                    <rect key="frame" x="0.0" y="92" width="93" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -47,11 +53,20 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AZV-aJ-McW" firstAttribute="leading" secondItem="ZaE-ib-uhO" secondAttribute="leading" id="D15-LR-1PW"/>
+                                        <constraint firstAttribute="bottom" secondItem="szM-An-nwV" secondAttribute="bottom" id="Z6w-Vg-sBY"/>
+                                        <constraint firstAttribute="bottom" secondItem="AZV-aJ-McW" secondAttribute="bottom" id="jge-Kg-hCF"/>
+                                        <constraint firstItem="szM-An-nwV" firstAttribute="top" secondItem="ZaE-ib-uhO" secondAttribute="top" id="llv-ew-HUp"/>
+                                        <constraint firstItem="AZV-aJ-McW" firstAttribute="top" secondItem="ZaE-ib-uhO" secondAttribute="top" id="x2k-0t-VkH"/>
+                                        <constraint firstItem="szM-An-nwV" firstAttribute="leading" secondItem="AZV-aJ-McW" secondAttribute="trailing" constant="5" id="z2g-eZ-4ve"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nationLebel" destination="TAs-MS-yBl" id="Thd-aC-lKg"/>
-                                    <outlet property="populationLabel" destination="vOx-y0-Kh6" id="xES-Qh-gvP"/>
-                                    <outlet property="yearLabel" destination="bHH-cW-6UO" id="r4s-Nv-fir"/>
+                                    <outlet property="categoryLabel" destination="vOx-y0-Kh6" id="mXb-x2-Gal"/>
+                                    <outlet property="nameLabel" destination="TAs-MS-yBl" id="tcc-9K-I2b"/>
+                                    <outlet property="priceLabel" destination="bHH-cW-6UO" id="IZY-nW-n7y"/>
+                                    <outlet property="productsImage" destination="AZV-aJ-McW" id="3bD-s9-G1B"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
