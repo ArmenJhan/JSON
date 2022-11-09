@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     }
 
     private func fetchAgify() {
-        guard let url = URL(string: "https://api.agify.io/?name=bella") else { return }
+        guard let url = URL(string: "https://datausa.io/api/data?drilldowns=Nation&measures=Population") else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data =  data else {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             
             let decoder = JSONDecoder()
             do {
-                let agify = try decoder.decode(Agify.self, from: data)
+                let agify = try decoder.decode(DataUsa.self, from: data)
                 print(agify)
             } catch let error {
                 print(error.localizedDescription)

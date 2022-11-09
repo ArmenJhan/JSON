@@ -13,7 +13,7 @@
 		C026150D2917E9FB009DE000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C026150B2917E9FB009DE000 /* Main.storyboard */; };
 		C026150F2917E9FC009DE000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C026150E2917E9FC009DE000 /* Assets.xcassets */; };
 		C02615122917E9FC009DE000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02615102917E9FC009DE000 /* LaunchScreen.storyboard */; };
-		C026151E2917EAB3009DE000 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026151D2917EAB3009DE000 /* Model.swift */; };
+		C026151E2917EAB3009DE000 /* DataUSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026151D2917EAB3009DE000 /* DataUSA.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		C026150E2917E9FC009DE000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02615112917E9FC009DE000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02615132917E9FC009DE000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C026151D2917EAB3009DE000 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C026151D2917EAB3009DE000 /* DataUSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUSA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 		C026151C2917EA70009DE000 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C026151D2917EAB3009DE000 /* Model.swift */,
+				C026151D2917EAB3009DE000 /* DataUSA.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 				C026150A2917E9FB009DE000 /* ViewController.swift in Sources */,
 				C02615062917E9FB009DE000 /* AppDelegate.swift in Sources */,
 				C02615082917E9FB009DE000 /* SceneDelegate.swift in Sources */,
-				C026151E2917EAB3009DE000 /* Model.swift in Sources */,
+				C026151E2917EAB3009DE000 /* DataUSA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
