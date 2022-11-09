@@ -23,7 +23,6 @@ class MainViewController: UITableViewController {
         products.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         guard let cell = cell as? ProductsCell else { return UITableViewCell() }
@@ -39,23 +38,33 @@ class MainViewController: UITableViewController {
 // MARK: - Networking
 extension MainViewController {
     private func fetchProduct() {
-        guard let url = URL(string: "https://mockyard.herokuapp.com/products") else { return }
+        NetworkManager.shared.fetch([Product].self, from: "https://mockyard.herokuapp.com/products") { [weak self] result in
+            switch result{
+            case .success(let products):
+                print(products)
         
-        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error discription")
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                self?.products = try decoder.decode([Product].self, from: data)
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
-            } catch let error {
+            case .failure(let error):
                 print(error.localizedDescription)
             }
-        }.resume()
+        }
+//        guard let url = URL(string: "https://mockyard.herokuapp.com/products") else { return }
+//
+//        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+//            guard let data = data else {
+//                print(error?.localizedDescription ?? "No error discription")
+//                return
+//            }
+//
+//            do {
+//                let decoder = JSONDecoder()
+//                self?.products = try decoder.decode([Product].self, from: data)
+//                DispatchQueue.main.async {
+//                    self?.tableView.reloadData()
+//                }
+//            } catch let error {
+//                print(error.localizedDescription)
+//            }
+//        }.resume()
     }
+   
 }

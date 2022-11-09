@@ -19,11 +19,12 @@ class ProductsCell: UITableViewCell {
         priceLabel.text = product.price
         categoryLabel.text = product.category
         
-        guard let imageURL = URL(string: product.image ?? "") else { return }
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
-            DispatchQueue.main.async { [weak self] in
-                self?.productsImage.image = UIImage(data: imageData)
+        NetworkManager.shared.fetchImage(from: product.image ?? "") { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.productsImage.image = UIImage(data: image)
+            case .failure(let error):
+                print(error)
             }
         }
     }
