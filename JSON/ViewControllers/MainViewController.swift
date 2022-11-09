@@ -48,8 +48,10 @@ extension MainViewController {
             
             let decoder = JSONDecoder()
             do {
-                let agify = try decoder.decode(DataUsa.self, from: data)
-                print(agify)
+                let dataUSA = try decoder.decode([DataUsa].self, from: data)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             } catch let error {
                 print(error.localizedDescription)
             }
