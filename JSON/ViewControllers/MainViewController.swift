@@ -32,7 +32,6 @@ class MainViewController: UITableViewController {
         
         return cell
     }
-    
 }
 
 // MARK: - Networking
@@ -41,30 +40,13 @@ extension MainViewController {
         NetworkManager.shared.fetch([Product].self, from: "https://mockyard.herokuapp.com/products") { [weak self] result in
             switch result{
             case .success(let products):
+                self?.products = products
+                self?.tableView.reloadData()
                 print(products)
         
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-//        guard let url = URL(string: "https://mockyard.herokuapp.com/products") else { return }
-//
-//        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-//            guard let data = data else {
-//                print(error?.localizedDescription ?? "No error discription")
-//                return
-//            }
-//
-//            do {
-//                let decoder = JSONDecoder()
-//                self?.products = try decoder.decode([Product].self, from: data)
-//                DispatchQueue.main.async {
-//                    self?.tableView.reloadData()
-//                }
-//            } catch let error {
-//                print(error.localizedDescription)
-//            }
-//        }.resume()
     }
-   
 }

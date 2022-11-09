@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List-->
+        <!--Products-->
         <scene sceneID="AQi-iz-QN4">
             <objects>
                 <tableViewController id="fyE-KE-Nj4" customClass="MainViewController" customModule="JSON" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                             <outlet property="delegate" destination="fyE-KE-Nj4" id="I0Z-qR-EFZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="List" id="HyZ-OP-aIB"/>
+                    <navigationItem key="navigationItem" title="Products" id="HyZ-OP-aIB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhr-gV-Mk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

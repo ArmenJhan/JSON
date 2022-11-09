@@ -39,14 +39,14 @@ class NetworkManager {
             complition(.failure(.invalidURL))
             return
         }
-        
+
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 complition(.failure(.noData))
                 print(error?.localizedDescription ?? " No error discription")
                 return
             }
-            
+
             do {
                 let type = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
