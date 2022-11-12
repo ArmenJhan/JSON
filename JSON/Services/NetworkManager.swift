@@ -13,9 +13,12 @@ enum NetworkError: Error {
     case decodingError
 }
 
+enum Link: String {
+    case productURL = "https://mockyard.herokuapp.com/products"
+}
+
 class NetworkManager {
     static let shared = NetworkManager()
-    
     
     private init() {}
     

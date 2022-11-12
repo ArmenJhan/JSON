@@ -26,18 +26,27 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         guard let cell = cell as? ProductsCell else { return UITableViewCell() }
-        
         let product = products[indexPath.row]
+       
         cell.configure(with: product)
+        cell.activityIndicator.startAnimating()
+        cell.activityIndicator.hidesWhenStopped = true
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let infoVC = segue.destination as? InfoViewController
+        guard let indexPath = tableView.indexPathForSelectedRow else { return}
+        infoVC?.info = products[indexPath.row]
+        
     }
 }
 
 // MARK: - Networking
 extension MainViewController {
     private func fetchProduct() {
-        NetworkManager.shared.fetch([Product].self, from: "https://mockyard.herokuapp.com/products") { [weak self] result in
+        NetworkManager.shared.fetch([Product].self, from: Link.productURL.rawValue) { [weak self] result in
             switch result{
             case .success(let products):
                 self?.products = products

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00C9352291FC98D0019A67B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00C9351291FC98D0019A67B /* InfoViewController.swift */; };
 		C02615062917E9FB009DE000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02615052917E9FB009DE000 /* AppDelegate.swift */; };
 		C02615082917E9FB009DE000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02615072917E9FB009DE000 /* SceneDelegate.swift */; };
 		C026150D2917E9FB009DE000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C026150B2917E9FB009DE000 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C00C9351291FC98D0019A67B /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		C02615022917E9FB009DE000 /* JSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02615052917E9FB009DE000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C02615072917E9FB009DE000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				C0F0F07D291BBE2500950045 /* MainViewController.swift */,
+				C00C9351291FC98D0019A67B /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				C0812EE1291C16F500244868 /* NetworkManager.swift in Sources */,
 				C02615062917E9FB009DE000 /* AppDelegate.swift in Sources */,
 				C0F0F07E291BBE2500950045 /* MainViewController.swift in Sources */,
+				C00C9352291FC98D0019A67B /* InfoViewController.swift in Sources */,
 				C0F0F086291BF87600950045 /* Products.swift in Sources */,
 				C02615082917E9FB009DE000 /* SceneDelegate.swift in Sources */,
 				C0F0F088291BF8CD00950045 /* ProductsCell.swift in Sources */,
@@ -354,6 +358,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,6 +389,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
