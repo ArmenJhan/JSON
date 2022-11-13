@@ -17,7 +17,6 @@ class MainViewController: UITableViewController {
         fetchProduct()
     }
     
-    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         products.count
@@ -46,13 +45,11 @@ class MainViewController: UITableViewController {
 // MARK: - Networking
 extension MainViewController {
     private func fetchProduct() {
-        NetworkManager.shared.fetch([Product].self, from: Link.productURL.rawValue) { [weak self] result in
-            switch result{
+        NetworkManager.shared.fetchProducts(from: Link.productURL.rawValue) { [weak self] result in
+            switch result {
             case .success(let products):
                 self?.products = products
                 self?.tableView.reloadData()
-                print(products)
-        
             case .failure(let error):
                 print(error.localizedDescription)
             }

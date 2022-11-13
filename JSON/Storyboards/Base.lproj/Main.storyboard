@@ -76,7 +76,7 @@
                                     <outlet property="categoryLabel" destination="vOx-y0-Kh6" id="mXb-x2-Gal"/>
                                     <outlet property="nameLabel" destination="TAs-MS-yBl" id="tcc-9K-I2b"/>
                                     <outlet property="priceLabel" destination="bHH-cW-6UO" id="IZY-nW-n7y"/>
-                                    <outlet property="productsImage" destination="AZV-aJ-McW" id="3bD-s9-G1B"/>
+                                    <outlet property="productImage" destination="AZV-aJ-McW" id="3bD-s9-G1B"/>
                                     <segue destination="dFL-gf-sHn" kind="presentation" identifier="info" id="5QJ-IR-fM4"/>
                                 </connections>
                             </tableViewCell>
