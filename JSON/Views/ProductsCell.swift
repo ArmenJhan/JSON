@@ -20,7 +20,7 @@ class ProductsCell: UITableViewCell {
         priceLabel.text = product.price
         categoryLabel.text = product.rating.formatted()
         
-        NetworkManager.shared.fetchData(from: Link.imageURL.rawValue) { [weak self] result in
+        NetworkManager.shared.fetchData(from: product.image ?? "") { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.productImage?.image = UIImage(data: imageData)

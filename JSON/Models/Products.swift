@@ -23,17 +23,9 @@ struct Product: Decodable {
         
     }
     
-    init(name: String, image: String?, price: String, description: String, rating: Double) {
-        self.name = name
-        self.image = image
-        self.price = price
-        self.description = description
-        self.rating = rating
-    }
-    
     init(productData: [String: Any]) {
         name = productData["name"] as? String ?? ""
-        image = productData["image"] as? String ?? ""
+        image = productData["image_link"] as? String ?? ""
         price = productData["price"] as? String ?? ""
         description = productData["description"] as? String ?? ""
         rating = productData["rating"] as? Double ?? 0.0

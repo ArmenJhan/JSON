@@ -29,7 +29,7 @@ class InfoViewController: UIViewController {
     }
     
     private func fetchImage() {
-        NetworkManager.shared.fetchData(from: Link.imageURL.rawValue) { [weak self] result in
+        NetworkManager.shared.fetchData(from: info.image ?? "") { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.imageView.image = UIImage(data: imageData)
